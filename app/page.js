@@ -1,91 +1,160 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+import { motion } from "framer-motion";
+import {
+  RxGithubLogo,
+  RxLinkedinLogo,
+  RxCross2,
+  RxDividerHorizontal,
+  RxBox,
+} from "react-icons/rx";
+import styles from "./page.module.css";
+const page = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className={styles.container}>
+      <section className={styles.text__home}>
+        <motion.h3
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          Hola.
+        </motion.h3>
+
+        <motion.h1
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          Me llamo <span>Matias</span>
+        </motion.h1>
+
+        <motion.h2
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          Desarollador <span>Front-End</span>
+        </motion.h2>
+
+        <div className={styles.btn__box}>
+          <motion.a
+            initial={{ x: -10, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 10, opacity: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className={styles.btn__1}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <RxGithubLogo size="2rem" />
+            Github
+          </motion.a>
+          <motion.a
+            initial={{ x: 10, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -10, opacity: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className={styles.btn__2}
+          >
+            <RxLinkedinLogo size="2rem" />
+            LinkedIn
+          </motion.a>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+      </section>
+      <motion.section 
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 10, opacity: 0 }}
+        transition={{ duration: 0.6, delay: 1.5 }}
+        className={styles.code__box}>
+        <header className={styles.header__code}>
+          <h3>Matias.js</h3>
+          <ul className={styles.btns__code}>
+            <li>
+              <RxDividerHorizontal style={{ color: "#FEFCF3" }} />
+            </li>
+            <li>
+              <RxBox style={{ color: "#FEFCF3" }} />
+            </li>
+            <li>
+              <RxCross2 style={{ color: "#FEFCF3" }} />
+            </li>
+          </ul>
+        </header>
+        <div className={styles.code__window}>
+          <p className={styles.code__line}>
+            <span className={styles.const}>const</span>
+            <span className={styles.variable}> matias </span>
+            <span>= &#123;</span>
+          </p>
+          <div className={styles.identation}>
+            <p className={styles.code__line}>
+              <span className={styles.key}>apellidos:</span>
+              <span>&#91;"Sio", "Cordich"&#93;,</span>
+            </p>
+            <p className={styles.code__line}>
+              <span className={styles.key}>trabajo:</span>
+              <span> "Front-End developer"</span>,
+            </p>
+            <p className={styles.code__line}>
+              <span className={styles.key}>edad:</span>
+              <span> 26</span>,
+            </p>
+            <p className={styles.code__line}>
+              <span className={styles.key}>pais: </span>
+              <span>"Argentina"</span>,
+            </p>
+            <p className={styles.code__line}>
+              <span className={styles.key}>lenguajes:</span>
+              <span>&#91;"HTML", "CSS", "Javascript","Typescript"&#93;</span>,
+            </p>
+            <p className={styles.code__line}>
+              <span className={styles.key}>skills: </span>
+              <span>&#123;</span>
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: ".6rem",
+                marginLeft: "10px",
+              }}
+            >
+              <p style={{ marginLeft: "10px" }} className={styles.code__line}>
+                <span className={styles.key}>frontend:</span>
+                <span>
+                  &#91;"React", "Redux", "Styled-Components","Bootstrap"&#93;
+                </span>
+                ,
+              </p>
+              <p style={{ marginLeft: "10px" }} className={styles.code__line}>
+                <span className={styles.key}>backend:</span>
+                <span>&#91;"Node.js", "Express", "Nest"&#93;</span>,
+              </p>
+              <p style={{ marginLeft: "10px" }} className={styles.code__line}>
+                <span className={styles.key}>database:</span>
+                <span>&#91;"MongoDB", "Firebase"&#93;</span>,
+              </p>
+              <p style={{ marginLeft: "10px" }} className={styles.code__line}>
+                <span className={styles.key}>herramientas:</span>
+                <span>
+                  &#91;"Vercel", "Postman", "Git","Github", "VSCode"&#93;
+                </span>
+              </p>
+              <p className={styles.code__line}>
+                <span style={{ marginRight: "10px" }}>&#125;</span>
+              </p>
+            </div>
+          </div>
+          <p className={styles.code__line}>
+            <span>&#125;</span>
+          </p>
         </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </motion.section>
     </main>
-  )
-}
+  );
+};
+
+export default page;

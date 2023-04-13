@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 15rem;
+}
+
+.card{
+    max-width: 50rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .3rem;
+    border: 2px dotted var(--green);
+}
+
+.card img{
+    max-width: 65rem;
+    width: 100%;
+    padding: .5rem;
+}
+
+.card_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card_description h2{
+    font-weight: 500;
+    color: var(--orange);
+}
+
+.card_description p {
+    line-height: 4rem;
+}
+
+.card_description ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    color: var(--dark-green);
+}
+
+.card_links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn_1,
+.btn_2{
+    padding: .8rem 2rem;
+    border-radius: .3rem;
+}
+
+.btn_1{
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn_1:hover{
+    background-color: var(--orange);
+    color: var(--cream);
+    transition: all .6s;
+}
+
+.btn_2{
+    background-color: var(--dark-green);
+    color: var(--cream);
+}
+
+@media (min-width: 1200px) {
+    .card{
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+        width: fit-content;
+        gap: 2rem;
+    }
+
+    .card_description{
+        padding: .4rem;
+        height: 100%;
+        width: 60%;
+        align-items: flex-start;
+    }
+
+    .card_description h2{
+        font-size: 4rem;
+    }
+}

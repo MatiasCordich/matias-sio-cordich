@@ -1,0 +1,22 @@
+.footer__container,
+.footer__text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__container{
+    margin-top: 10rem;
+    height: 10rem;
+}
+
+.footer__text_box{
+    gap: 2rem;
+    color: var(--green);
+}
+
+.footer__text_box a {
+    color: var(--green);
+    font-weight: 600;
+}

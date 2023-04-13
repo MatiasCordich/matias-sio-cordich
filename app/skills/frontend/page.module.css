@@ -1,0 +1,39 @@
+.skills_box,
+.skills_icons,
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+
+.skills_box,
+.skills_icons{
+    gap: 2.5rem;
+}
+
+.skills_box h2{
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--orange);
+}
+
+.icons{
+    gap: 1rem;
+    color: var(--green);
+}
+
+.icons p{
+    color: #000;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .skills_icons{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+

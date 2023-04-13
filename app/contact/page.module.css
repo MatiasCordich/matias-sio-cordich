@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 15rem;
+}
+
+.container h2{
+    color: var(--orange);
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.links_box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.links_box a {
+    color: var(--green);
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .links{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}

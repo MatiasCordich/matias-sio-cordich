@@ -1,0 +1,58 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 50rem;
+    width: 95%;
+    margin: 0 auto;
+    margin-top:10rem;
+}
+
+.navbar__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--green);
+    border-radius: .6rem;
+}
+
+.navbar__head h3{
+    font-weight: 400;
+    color: var(--cream);
+}
+
+.menu__btns{
+    cursor: pointer;
+}
+
+.rotate{
+    transition: all .4s;
+    transform: rotate(180deg);
+}
+
+.invert_rotate{
+    transition: all .4s;
+    transform: rotate(0deg);
+}
+
+.navbar__links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--green);
+    padding: .8rem;
+    border-radius: .6rem;
+}
+
+.navbar__links li{
+    color: var(--cream);
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.navbar__links li a {
+    color: var(--cream);
+    font-weight: 600;
+}
+
