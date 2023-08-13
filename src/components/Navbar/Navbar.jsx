@@ -1,26 +1,29 @@
-import { Link, LinkBox, LinkNumber, Logo, LogoContainer, MenuBtn, NavContainer, NavbarLinks, ResumeBtn } from "./navbarElements"
+import { LinkBox, LinkNumber, Logo, LogoContainer, MenuBtn, NavContainer, NavbarLinks, ResumeBtn } from "./navbarElements"
+import { Link } from "react-scroll"
 import { logo } from '../../assets/index.js'
 import { motion } from 'framer-motion'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export const Navbar = () => {
 
   const [open, setOpen] = useState(false);
-  const [background, setBackground] = useState(false)
+  const [scroll, setScroll] = useState(0)
 
-  const changeBackground = () => {
-    if (window.screenY >= 90) {
-      setBackground(true)
-    } else {
-      setBackground(false)
-    }
+  const handleScroll = () => {
+    setScroll(window.scrollY)
   }
 
-  window.addEventListener('scroll',changeBackground)
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
+
 
   return (
-    <NavContainer open={background}>
+    <NavContainer scroll={scroll}>
       <LogoContainer
         as={motion.div}
         initial={{ opacity: 0 }}
@@ -42,6 +45,13 @@ export const Navbar = () => {
       <NavbarLinks open={open}>
         <LinkBox open={open}>
           <Link
+            activeClass='active'
+            to='page1'
+            spy={true}
+            smooth={true}
+            duration={2000}
+            style={{ cursor: 'pointer' }}
+            offset={-1000}
             as={motion.a}
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -52,6 +62,13 @@ export const Navbar = () => {
         </LinkBox>
         <LinkBox open={open}>
           <Link
+            activeClass='active'
+            to='page2'
+            spy={true}
+            smooth={true}
+            duration={2000}
+            style={{ cursor: 'pointer' }}
+            offset={-150}
             onClick={() => setOpen(!open)}
             as={motion.a}
             initial={{ y: -10, opacity: 0 }}
@@ -64,6 +81,13 @@ export const Navbar = () => {
         </LinkBox>
         <LinkBox open={open}>
           <Link
+            activeClass='active'
+            to='page3'
+            spy={true}
+            smooth={true}
+            duration={2000}
+            style={{ cursor: 'pointer' }}
+            offset={-150}
             onClick={() => setOpen(!open)}
             as={motion.a}
             initial={{ y: -10, opacity: 0 }}
@@ -76,6 +100,13 @@ export const Navbar = () => {
         </LinkBox>
         <LinkBox open={open}>
           <Link
+            activeClass='active'
+            to='page4'
+            spy={true}
+            smooth={true}
+            duration={2000}
+            style={{ cursor: 'pointer' }}
+            offset={-150}
             onClick={() => setOpen(!open)}
             as={motion.a}
             initial={{ y: -10, opacity: 0 }}

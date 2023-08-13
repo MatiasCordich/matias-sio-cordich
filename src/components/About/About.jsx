@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
     return (
-        <AboutBox>
+        <AboutBox id='page2'>
             <S_Layout>
                 <Title
                     title="Sobre mi" number="01"

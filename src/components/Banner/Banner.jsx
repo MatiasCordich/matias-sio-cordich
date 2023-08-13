@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const Banner = () => {
     return (
-        <BannerBox>
+        <BannerBox id='page1'>
             <BannerHeadTitle
                 as={motion.h3}
                 initial={{ y: 10, opacity: 0 }}

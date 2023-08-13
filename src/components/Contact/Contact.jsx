@@ -3,7 +3,8 @@ import { ContactBox, ContactHead, ContactLink, ContactText, ContactTitle } from 
 import { motion } from 'framer-motion'
 const Contact = () => {
   return (
-    <S_Layout>
+    <div id='page4'>
+        <S_Layout>
         <ContactBox
             as={motion.div}
             initial={{y:10, opacity: 0 }}
@@ -27,6 +28,8 @@ const Contact = () => {
             </ContactLink>
         </ContactBox>
     </S_Layout>
+    </div>
+    
   )
 }
 

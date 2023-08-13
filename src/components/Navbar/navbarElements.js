@@ -10,12 +10,14 @@ export const NavContainer = styled.nav`
     width: 100%;
     display: flex;
     align-items: center;
-    background: ${({ background }) => (background ? "red" : "transparent")};
     font-family: var(--title-Font);
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 1rem;
-    height: 10rem;
+    background: ${({ scroll }) => (scroll > 1.5 ? 'rgba(10, 25, 47, 0.65)' : "transparent")};
+    backdrop-filter: ${({ scroll }) => (scroll > 1.5 ? 'blur(5px)' : "none")};
+    transition: all .6s;
+    padding: 2rem;
+    height: fit-content;
     justify-content: space-around;
     margin: 0 auto;
     z-index: 999;
@@ -79,10 +81,11 @@ export const NavbarLinks = styled.ul`
     font-family: var(--title-Font);
     font-size: 1.5rem;
     font-weight: 600;
-    background: none;
+    background: transparent;
     box-shadow: none;
-    backdrop-filter: inherit;
+    backdrop-filter: unset;
     width: 90%;
+    height: fit-content;
     gap: 2rem;
     transition: none;
   }
