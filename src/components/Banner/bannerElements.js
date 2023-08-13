@@ -7,7 +7,7 @@ export const BannerBox = styled.main`
     width: 95%;
     margin: 5rem auto;
     @media (min-width: 900px) {
-        margin: 10rem auto;
+        margin: 20rem auto;
         width: 85%;
     }
 `

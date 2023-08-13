@@ -5,6 +5,7 @@ import {
     FiLinkedin,
     FiFacebook
 } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 import Banner from '../Banner/Banner'
 import About from '../About/About'
 import Projects from '../Projects/Projects'
@@ -13,7 +14,12 @@ import Footer from '../Footer/Footer'
 
 export const LeftSide = () => {
     return (
-        <LeftSideBox>
+        <LeftSideBox
+            as={motion.aside}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.6 }}
+        >
             <LeftSideLinks>
                 <Link>
                     <SocialLink>
@@ -39,25 +45,30 @@ export const LeftSide = () => {
 
 export const MiddleSide = () => {
     return (
-        <MiddleSideBox>
+        <MiddleSideBox
+        >
             <Banner/>
-            <About/>
-            <Projects/>
-            <Contact/>
-            <Footer/>
+            <About />
+            <Projects />
+            <Contact />
+            <Footer />
         </MiddleSideBox>
     )
 }
 
 export const RightSide = () => {
     return (
-        <RightSideBox>
+        <RightSideBox
+            as={motion.aside}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.6 }}
+        >
             <EmailLink>
                 <TextLink>
-                m.scordich@gmail.com
+                    m.scordich@gmail.com
                 </TextLink>
-                
-                <AsideLine/>
+                <AsideLine />
             </EmailLink>
 
         </RightSideBox>

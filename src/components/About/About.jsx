@@ -4,13 +4,22 @@ import { S_Layout } from '../Layouts/Layouts'
 import Title from '../Title/Title'
 import { stack } from '../../Information/information'
 import { profile } from '../../assets'
+import { motion } from 'framer-motion'
 
 const About = () => {
     return (
         <AboutBox>
             <S_Layout>
-                <Title title="Sobre mi" number="01" />
-                <AboutContent>
+                <Title
+                    title="Sobre mi" number="01"
+                />
+                <AboutContent
+                    as={motion.div}
+                    initial={{y: -10, opacity: 0}}
+                    whileInView={{y: 10, opacity: 1}}
+                    transition={{duration: .6, delay: 2}}
+
+                >
                     <AboutTexts>
                         <TextBox>
                             <Text>
@@ -35,9 +44,9 @@ const About = () => {
                         </TextBox>
                         <LineAbout />
                         <TechStack>
-                            {stack.map(s => 
+                            {stack.map(s =>
                                 <TechItem key={s.id}>
-                                    <BsCheck2  color="#64ffda" />{s.name}
+                                    <BsCheck2 color="#64ffda" />{s.name}
                                 </TechItem>
                             )}
                         </TechStack>

@@ -1,9 +1,15 @@
 import { S_Layout } from '../Layouts/Layouts'
 import { ContactBox, ContactHead, ContactLink, ContactText, ContactTitle } from './contactElements'
+import { motion } from 'framer-motion'
 const Contact = () => {
   return (
     <S_Layout>
-        <ContactBox>
+        <ContactBox
+            as={motion.div}
+            initial={{y:10, opacity: 0 }}
+            whileInView={{y:-10, opacity: 1 }}
+            transition={{duration: 1, delay:2}}
+        >
             <ContactHead>
                 04. Contacto
             </ContactHead>
