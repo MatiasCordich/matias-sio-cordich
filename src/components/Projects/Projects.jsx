@@ -12,7 +12,7 @@ const Projects = () => {
                 <ProjectBoxLeft
                     as={motion.div}
                     initial={{ x: -10, opacity: 0 }}
-                    whileInView={{ x: 10, opacity: 1 }}
+                    whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                 >
                     <ImageBox>
@@ -34,7 +34,7 @@ const Projects = () => {
                 <ProjectBoxRight
                     as={motion.div}
                     initial={{ x: 10, opacity: 0 }}
-                    whileInView={{ x: -10, opacity: 1 }}
+                    whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1, delay: 2.5 }}
                 >
                     <ImageBox>
@@ -55,7 +55,7 @@ const Projects = () => {
                 <ProjectBoxLeft
                     as={motion.div}
                     initial={{ x: -10, opacity: 0 }}
-                    whileInView={{ x: 10, opacity: 1 }}
+                    whileInView={{ x:0, opacity: 1 }}
                     transition={{ duration: 1, delay: 2.7 }}
                 >
                     <ImageBox>

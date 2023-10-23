@@ -29,7 +29,7 @@ export const Link = styled.li``;
 
 export const SocialLink = styled.a`
   font-size: 2.8rem;
-  color: var(--text-Light);
+  color: ${({ theme }) => theme.colors.socialLink.color};
   cursor: pointer;
 
   &:hover {
@@ -59,6 +59,7 @@ export const RightSideBox = styled.aside`
     gap: 2rem;
     width: 5%;
     height: 100svh;
+    
   }
 `;
 
@@ -71,11 +72,9 @@ export const EmailLink = styled.a`
   width: 5%;
   bottom: 0;
   cursor: pointer;
+  color:${({ theme }) => theme.colors.emailLink.color};;
+  font-weight: 600;
   
-  &:hover{
-    color: var(--text-Green);
-    transition: all .6s;
-  }
 `;
 
 export const TextLink = styled.p`

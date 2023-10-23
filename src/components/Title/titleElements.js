@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TitleText = styled.h2`
   font-family: var(--title-Font);
+  color: ${({ theme }) => theme.colors.titleSection.text};
   font-size: 4rem;
   display: flex;
   align-items: center;
@@ -9,9 +10,9 @@ export const TitleText = styled.h2`
   gap: 1rem;
 `;
 export const TitleNumber = styled.span`
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.titleSection.span};
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
 `;
 
 export const Line = styled.div`

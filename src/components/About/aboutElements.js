@@ -18,7 +18,7 @@ export const AboutTexts = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  color: var(--text-Dark);
+  
 
   @media (min-width: 1200px) {
     width: 55%;
@@ -27,6 +27,8 @@ export const AboutTexts = styled.ul`
 export const TextBox = styled.li``;
 export const Text = styled.p`
   line-height: 4rem;
+  color: ${({ theme }) => theme.colors.text};
+  font-weight: 500;
 `;
 export const SpanText = styled.span`
   color: var(--text-Green);
@@ -42,6 +44,8 @@ export const TechStack = styled.ul`
     display: grid;
     row-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
+    color: ${({ theme }) => theme.colors.text};
+    font-weight: 500;
 
     @media (min-width: 900px) {
         grid-template-columns: repeat(3, 1fr);
@@ -53,6 +57,13 @@ export const TechItem = styled.li`
     align-items: center;
     gap: .3rem;
     font-size: 1.6rem;
+`
+
+export const IconBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  color: ${({ theme }) => theme.colors.checkIcon.color};
 `
 export const AboutImage = styled.div`
     display: flex;

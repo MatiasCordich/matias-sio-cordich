@@ -13,9 +13,8 @@ export const NavContainer = styled.nav`
     font-family: var(--title-Font);
     font-size: 1.5rem;
     font-weight: 600;
-    background: ${({ scroll }) => (scroll > 1.5 ? 'rgba(10, 25, 47, 0.65)' : "transparent")};
+    background: ${({ scroll }) => (scroll > 1.5 ? 'rgba( 255, 255, 255, .0006 )' : "transparent")};
     backdrop-filter: ${({ scroll }) => (scroll > 1.5 ? 'blur(5px)' : "none")};
-    transition: all .6s;
     padding: 2rem;
     height: fit-content;
     justify-content: space-around;
@@ -54,6 +53,32 @@ export const MenuBtn = styled.button`
   }
 `;
 export const Logo = styled.img``;
+
+export const SContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: ${({ theme }) => theme.colors.buttonMode.icon};
+`;
+export const SwitchBox = styled.div`
+  width: 5rem;
+  height: 2.7rem;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: ${({ theme }) => theme.colors.flexDirection};
+  border-radius: 98rem;
+  padding: 0.1rem;
+  cursor: pointer;
+`;
+
+export const Switch = styled.button`
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color:${({ theme }) => theme.colors.buttonMode.button};
+`;
+
 export const NavbarLinks = styled.ul`
   position: fixed;
   display: flex;
@@ -91,8 +116,10 @@ export const NavbarLinks = styled.ul`
   }
 `;
 export const LinkBox = styled.li`
+  gap: .3rem;
   opacity: ${({ open }) => (open ? "1" : "0")};
   transition: all 0.2s;
+  color: ${({ theme }) => theme.colors.navLinks.color};
 
   @media (min-width: 900px) {
     opacity: 1;
@@ -100,7 +127,6 @@ export const LinkBox = styled.li`
 `;
 
 export const Link = styled.a`
-  color: var(--text-Light);
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -112,7 +138,7 @@ export const Link = styled.a`
   }
 `;
 export const LinkNumber = styled.span`
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.navLinks.numbers};
 `;
 export const ResumeBtn = styled.button`
   opacity: ${({ open }) => (open ? "1" : "0")};

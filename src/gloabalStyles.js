@@ -7,10 +7,18 @@ export const GlobalStyle = createGlobalStyle`
   --body-Font: "Montserrat", sans-serif;
 
   /* Colors */
+
+  /* DARK MODE */
   --body-Color: #0a192f;
   --text-Green: #64ffda;
   --text-Light: #ccd6f6;
   --text-Dark: #8892b0;
+
+  /* LIGHT MODE */
+  --body-Color-l: #F5F7F8;
+  --text-Green-l: #59CE8F;
+  --text-Light-l: #213547;
+  --text-Dark-l: #3c3c3cb3;
 
   /* Max-widths */
   --contaier: 200rem;
@@ -33,7 +41,8 @@ html {
 body {
   font-family: var(--body-Font);
   font-size: 1.8rem;
-  background: var(--body-Color);
+  background-color: ${({ theme }) => theme.colors.body.background};
+  transition: .4s all;
   color: var(--text-Light);
 }
 
@@ -44,14 +53,17 @@ li {
 }
 
 a {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
   text-decoration: none;
 }
 
 button{
-  background-color: transparent;
-  border: 1px solid var(--text-Green);
+  background-color: ${({ theme }) => theme.colors.buttonResume.background};
+  border: ${({ theme }) => theme.colors.buttonResume.border};
   padding: 1.5rem 2rem;
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.buttonResume.color};
   font-size: 1.6rem;
   cursor: pointer;
   padding: 1.5rem 2rem;
@@ -61,8 +73,8 @@ button{
 }
 
 button:hover {
-  background-color: #64ffdb4f;
-  transition: all 0.8s;
+  background-color: ${({ theme }) => theme.colors.buttonResume.hover};
+  transition:${({ theme }) => theme.colors.buttonResume.transition};
 }
 
 footer{

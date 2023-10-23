@@ -22,17 +22,26 @@ export const LeftSide = () => {
         >
             <LeftSideLinks>
                 <Link>
-                    <SocialLink>
+                    <SocialLink 
+                        href='https://github.com/MatiasCordich'
+                        target='_blank'
+                    >
                         <FiGithub />
                     </SocialLink>
                 </Link>
                 <Link>
-                    <SocialLink>
+                    <SocialLink
+                        href='https://www.linkedin.com/in/matiassiocordich/'
+                        target='_blank'
+                    >
                         <FiLinkedin />
                     </SocialLink>
                 </Link>
                 <Link>
-                    <SocialLink>
+                    <SocialLink
+                        href='https://www.facebook.com/matias.cordich'
+                        target='_blank'
+                    >
                         <FiFacebook />
                     </SocialLink>
                 </Link>
@@ -64,7 +73,9 @@ export const RightSide = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.6 }}
         >
-            <EmailLink>
+            <EmailLink
+                href="mailto:m.scordich@gmail.com"
+            >
                 <TextLink>
                     m.scordich@gmail.com
                 </TextLink>

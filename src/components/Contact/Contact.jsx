@@ -23,7 +23,9 @@ const Contact = () => {
             <ContactText>  Si tienes alguna propuesta laboral, no dudes en escribirme. Muchas gracias!</ContactText>
          
             
-            <ContactLink>
+            <ContactLink
+                 href="mailto:m.scordich@gmail.com"
+            >
                 Di, hola!
             </ContactLink>
         </ContactBox>

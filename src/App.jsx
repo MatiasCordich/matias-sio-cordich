@@ -1,6 +1,9 @@
+import styled, { ThemeProvider } from 'styled-components'
 import Box from './components/Box/Box'
-import {Navbar} from './components/Navbar/Navbar'
-import styled from 'styled-components'
+import { Navbar } from './components/Navbar/Navbar'
+import { useThemeMode } from "./hooks/useThemeMode";
+import { GlobalStyle } from './gloabalStyles.js'
+import { themes } from './themes/theme';
 
 const Container = styled.div`
   max-width: 220rem;
@@ -12,11 +15,17 @@ const Container = styled.div`
 `
 
 const App = () => {
+
+  const [theme, toggleTheme] = useThemeMode()
+
   return (
-    <Container>
-      <Navbar/>
-      <Box/>
-    </Container>
+    <ThemeProvider theme={themes[theme]}>
+      <GlobalStyle />
+      <Container>
+        <Navbar handleClick={toggleTheme}/>
+        <Box />
+      </Container>
+    </ThemeProvider>
   )
 }
 

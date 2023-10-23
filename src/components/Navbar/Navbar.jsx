@@ -1,11 +1,18 @@
-import { LinkBox, LinkNumber, Logo, LogoContainer, MenuBtn, NavContainer, NavbarLinks, ResumeBtn } from "./navbarElements"
+import { LinkBox, LinkNumber, Logo, LogoContainer, MenuBtn, NavContainer, NavbarLinks, ResumeBtn, SContent, Switch, SwitchBox } from "./navbarElements"
+import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { Link } from "react-scroll"
 import { logo } from '../../assets/index.js'
 import { motion } from 'framer-motion'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { useEffect, useState } from "react"
 
-export const Navbar = () => {
+export const Navbar = ({ handleClick }) => {
+
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30
+  };
 
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(0)
@@ -43,7 +50,20 @@ export const Navbar = () => {
 
 
       <NavbarLinks open={open}>
-        <LinkBox open={open}>
+        <SContent>
+          <BsFillSunFill />
+          <SwitchBox onClick={handleClick} >
+            <Switch as={motion.div} layout transition={spring} />
+          </SwitchBox>
+          <BsFillMoonFill />
+        </SContent>
+        <LinkBox
+          open={open}
+          as={motion.li}
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: 1.5 }}
+        >
           <Link
             activeClass='active'
             to='page1'
@@ -52,15 +72,16 @@ export const Navbar = () => {
             duration={2000}
             style={{ cursor: 'pointer' }}
             offset={-1000}
-            as={motion.a}
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: .9, delay: 1.5 }}
             onClick={() => setOpen(!open)}>
             Home
           </Link>
         </LinkBox>
-        <LinkBox open={open}>
+        <LinkBox
+          open={open}
+          as={motion.li}
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: 1.6 }}>
           <Link
             activeClass='active'
             to='page2'
@@ -70,16 +91,18 @@ export const Navbar = () => {
             style={{ cursor: 'pointer' }}
             offset={-150}
             onClick={() => setOpen(!open)}
-            as={motion.a}
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: .9, delay: 1.6 }}
           >
             <LinkNumber>01.</LinkNumber>
             Sobre mi
           </Link>
         </LinkBox>
-        <LinkBox open={open}>
+        <LinkBox
+          open={open}
+          as={motion.li}
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: 1.7 }}
+        >
           <Link
             activeClass='active'
             to='page3'
@@ -89,16 +112,18 @@ export const Navbar = () => {
             style={{ cursor: 'pointer' }}
             offset={-150}
             onClick={() => setOpen(!open)}
-            as={motion.a}
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: .9, delay: 1.7 }}
           >
             <LinkNumber>02.</LinkNumber>
             Portfolio
           </Link>
         </LinkBox>
-        <LinkBox open={open}>
+        <LinkBox
+          open={open}
+          as={motion.li}
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: .6, delay: 1.8 }}
+        >
           <Link
             activeClass='active'
             to='page4'
@@ -108,10 +133,6 @@ export const Navbar = () => {
             style={{ cursor: 'pointer' }}
             offset={-150}
             onClick={() => setOpen(!open)}
-            as={motion.a}
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: .9, delay: 1.8 }}
           >
             <LinkNumber>03.</LinkNumber>
             Contacto

@@ -1,12 +1,15 @@
-import { AboutBox, AboutContent, AboutImage, AboutTexts, Image, LineAbout, SpanText, TechItem, TechStack, Text, TextBox } from './aboutElements'
+import { AboutBox, AboutContent, AboutImage, AboutTexts, IconBox, Image, LineAbout, SpanText, TechItem, TechStack, Text, TextBox } from './aboutElements'
 import { BsCheck2 } from 'react-icons/bs'
 import { S_Layout } from '../Layouts/Layouts'
 import Title from '../Title/Title'
 import { stack } from '../../Information/information'
 import { profile } from '../../assets'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const About = () => {
+
     return (
         <AboutBox id='page2'>
             <S_Layout>
@@ -15,9 +18,9 @@ const About = () => {
                 />
                 <AboutContent
                     as={motion.div}
-                    initial={{y: -10, opacity: 0}}
-                    whileInView={{y: 10, opacity: 1}}
-                    transition={{duration: .6, delay: 2}}
+                    initial={{ y: -10, opacity: 0 }}
+                    whileInView={{ y: 10, opacity: 1 }}
+                    transition={{ duration: .6, delay: 2 }}
 
                 >
                     <AboutTexts>
@@ -46,7 +49,10 @@ const About = () => {
                         <TechStack>
                             {stack.map(s =>
                                 <TechItem key={s.id}>
-                                    <BsCheck2 color="#64ffda" />{s.name}
+                                    <IconBox>
+                                        <BsCheck2 />
+                                    </IconBox>
+                                    {s.name}
                                 </TechItem>
                             )}
                         </TechStack>
