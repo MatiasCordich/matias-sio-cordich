@@ -18,6 +18,10 @@ export const useThemeMode = () => {
   const savedTheme = window.localStorage.getItem("theme")
 
   useEffect(() => {
+    window.localStorage.setItem("theme", theme)
+  })
+
+  useEffect(() => {
     savedTheme && setTheme(savedTheme)
   }, [])
 
