@@ -13,15 +13,17 @@ export const ContactBox = styled.div`
   }
 `;
 export const ContactHead = styled.h4`
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.titles.h3};
   text-align: center;
 `;
 export const ContactTitle = styled.h2`
+  color: ${({ theme }) => theme.colors.titles.h1};
   text-align: center;
 `;
 export const ContactText = styled.p`
   color: var(--text-Dark);
   max-width: 70rem;
+  font-weight: 500;
   width: 95%;
 
   @media (min-width: 900px) {
@@ -29,18 +31,18 @@ export const ContactText = styled.p`
   }
 `;
 export const ContactLink = styled.a`
-  background-color: transparent;
-  border: 1px solid var(--text-Green);
+  background-color: ${({ theme }) => theme.colors.buttonResume.background};
+  border: ${({ theme }) => theme.colors.buttonResume.border};
   padding: 1.5rem 2rem;
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.buttonResume.color};
+  padding: 1.5rem 2rem;
   font-size: 1.6rem;
   cursor: pointer;
-  padding: 1.5rem 2rem;
   border-radius: 0.6rem;
   font-family: var(--title-Font);
 
   &:hover {
-  background-color: #64ffdb4f;
-  transition: all 0.8s;
-}
+    background-color: ${({ theme }) => theme.colors.buttonResume.hover};
+  transition:${({ theme }) => theme.colors.buttonResume.transition};
+  }
 `;

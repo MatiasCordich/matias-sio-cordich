@@ -1,7 +1,7 @@
 import { LinkBox, LinkNumber, Logo, LogoContainer, MenuBtn, NavContainer, NavbarLinks, ResumeBtn, SContent, Switch, SwitchBox } from "./navbarElements"
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { Link } from "react-scroll"
-import { logo } from '../../assets/index.js'
+import { logo, logoL } from '../../assets/index.js'
 import { motion } from 'framer-motion'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { useEffect, useState } from "react"
@@ -28,6 +28,8 @@ export const Navbar = ({ handleClick }) => {
     };
   }, [])
 
+  const savedTheme = window.localStorage.getItem('theme')
+
 
   return (
     <NavContainer scroll={scroll}>
@@ -37,7 +39,12 @@ export const Navbar = ({ handleClick }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <Logo src={logo} alt="portfolio-matias-logo" />
+        {
+          savedTheme === "default"
+          ? <Logo src={logoL} alt="portfolio-matias-logo" />
+          : <Logo src={logo} alt="portfolio-matias-logo" />
+        }
+        
         <MenuBtn
           as={motion.button}
           initial={{ opacity: 0 }}

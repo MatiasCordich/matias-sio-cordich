@@ -31,7 +31,7 @@ export const Text = styled.p`
   font-weight: 500;
 `;
 export const SpanText = styled.span`
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.checkIcon.color};
   font-weight: 500;
 `;
 export const LineAbout = styled.div`
@@ -70,7 +70,7 @@ export const AboutImage = styled.div`
     justify-content: center;
 `
 export const Image = styled.img`
-    background-color: #fafafa;
+    background-color: ${({ theme }) => theme.colors.image.background};
     border-radius: 100%;
     object-fit: cover;
     max-width: 40rem;

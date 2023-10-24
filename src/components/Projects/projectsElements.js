@@ -58,12 +58,13 @@ export const DescriptionRight = styled(DescriptionLeft)`
 `;
 export const ProjectHeader = styled.h4`
   font-family: var(--title-Font);
-  color: var(--text-Green);
+  color: ${({ theme }) => theme.colors.titles.h3};
   font-size: 1.6rem;
 `;
 export const ProjectTitle = styled.h3`
   font-size: 3.5rem;
   font-weight: 700;
+  color: ${({ theme }) => theme.colors.titles.h1};
 `;
 export const ProjectText = styled.p`
   background-color: #112240;
@@ -80,6 +81,7 @@ export const ProjectStack = styled.ul`
 `;
 export const ItemStack = styled.li`
   color: var(--text-Dark);
+  font-weight: 500;
 `;
 export const ProjectLinks = styled.ul`
   display: flex;

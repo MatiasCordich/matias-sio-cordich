@@ -42,6 +42,9 @@ export const themes = {
       checkIcon: {
         color: "var(--text-Green-l)"
       },
+      image: {
+        background: "var(--text-Green-l)"
+      },
       flexDirection: "flex-start",
     },
   },
@@ -86,6 +89,9 @@ export const themes = {
       },
       checkIcon: {
         color: "var(--text-Green)"
+      },
+      image: {
+        background: "var(--body-Color-l)"
       },
       flexDirection: "flex-end",
     },
