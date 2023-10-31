@@ -28,7 +28,7 @@ export const BannerTitle = styled.h1`
   }
 `;
 export const BannerSpan = styled.span`
-  color: ${({ theme }) => theme.colors.title};
+  color: ${({ theme }) => theme.colors.titles.span};
 `;
 export const BannerText = styled.p`
   max-width: 60rem;

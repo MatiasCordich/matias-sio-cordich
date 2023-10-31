@@ -7,6 +7,7 @@ export const themes = {
       titles: {
         h3: "var(--text-Light-l)",
         h1: "var(--text-Green-l)",
+        span: "var(--text-Green-l)",
       },
       text: "var(--text-Dark-l)",
       buttonResume: {
@@ -30,10 +31,12 @@ export const themes = {
         button: "var(--text-Green-l)"
       },
       socialLink:{
-        color: "var(--text-Light-l)"
+        color: "var(--text-Light-l)",
+        hoverColor: "var(--text-Green-l)"
       },
       emailLink: {
-        color: "var(--text-Light-l)"
+        color: "var(--text-Light-l)",
+        hoverColor: "var(--text-Green-l)"
       },
       titleSection: {
         span: "var(--text-Green-l)",
@@ -55,7 +58,8 @@ export const themes = {
       },
       titles: {
         h3: "var(--text-Green)",
-        h1: "var(--text-Dark)",
+        h1: "var(--text-Light)",
+        span: "var(--text-Dark)",
       },
       text: "var(--text-Dark)",
       buttonResume: {
@@ -79,10 +83,12 @@ export const themes = {
         button: "var(--text-Light)"
       },
       socialLink:{
-        color: "var(--text-Light)"
+        color: "var(--text-Light)",
+        hoverColor: "var(--text-Green)"
       },
       emailLink: {
-        color: "var(--text-Green)",
+        color: "var(--text-Light)",
+        hoverColor: "var(--text-Green)"
       },
       titleSection: {
         span: "var(--text-Green)",

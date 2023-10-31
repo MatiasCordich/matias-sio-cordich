@@ -57,7 +57,12 @@ export const Navbar = ({ handleClick }) => {
 
 
       <NavbarLinks open={open}>
-        <SContent>
+        <SContent
+          as={motion.div}
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: .5, delay: 1.4 }}
+        >
           <BsFillSunFill />
           <SwitchBox onClick={handleClick} >
             <Switch as={motion.div} layout transition={spring} />

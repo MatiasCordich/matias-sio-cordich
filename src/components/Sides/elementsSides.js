@@ -33,7 +33,7 @@ export const SocialLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: var(--text-Green);
+    color: ${({ theme }) => theme.colors.socialLink.hoverColor};
     transition: all 0.8s;
   }
 `;
@@ -74,6 +74,11 @@ export const EmailLink = styled.a`
   cursor: pointer;
   color:${({ theme }) => theme.colors.emailLink.color};;
   font-weight: 600;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.emailLink.hoverColor};
+    transition: all 1s;
+  }
   
 `;
 
