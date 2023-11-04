@@ -30,6 +30,12 @@ export const themes = {
         icon: "var(--text-Light-l)",
         button: "var(--text-Green-l)"
       },
+      buttonNav: {
+        background: "var(--text-Green-l)"
+      },
+      navbarLinks:{
+        background: "rgba(265, 265, 265, 0.1)"
+      },
       socialLink:{
         color: "var(--text-Light-l)",
         hoverColor: "var(--text-Green-l)"
@@ -81,6 +87,12 @@ export const themes = {
       buttonMode:{
         icon: "var(--text-Light)",
         button: "var(--text-Light)"
+      },
+      buttonNav: {
+        background: "#060f1c"
+      },
+      navbarLinks:{
+        background: "rgba(10, 25, 47, 0.65)"
       },
       socialLink:{
         color: "var(--text-Light)",

@@ -43,7 +43,7 @@ export const MenuBtn = styled.button`
   align-items: center;
   z-index: 9999999;
   right: 5%;
-  background:#060f1c;
+  background:${({ theme }) => theme.colors.buttonNav.background};
   border: none;
   font-size: 2.5rem;
   padding: 1rem;
@@ -57,6 +57,8 @@ export const Logo = styled.img``;
 export const SContent = styled.div`
   display: flex;
   align-items: center;
+  opacity: ${({ open }) => (open ? "1" : "0")};
+  transition-duration: 0.1s;
   gap: 0.9rem;
   color: ${({ theme }) => theme.colors.buttonMode.icon};
 `;
@@ -86,16 +88,16 @@ export const NavbarLinks = styled.ul`
   justify-content: center;
   gap: 4rem;
   align-items: center;
-  background: rgba(10, 25, 47, 0.65);
+  background: ${({ theme }) => theme.colors.navbarLinks.background};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.9px);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(6.9px);
   width: ${({ open }) => (open ? "100%" : "0")};
   height: 100vh;
   top: 0;
   z-index: 9999;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 2s;
 
   @media (min-width: 900px) {
     position: relative;
@@ -118,8 +120,10 @@ export const NavbarLinks = styled.ul`
 export const LinkBox = styled.li`
   gap: .3rem;
   opacity: ${({ open }) => (open ? "1" : "0")};
-  transition: all 0.2s;
+  transition-duration: .5s;
+  transition-delay: 1s;
   color: ${({ theme }) => theme.colors.navLinks.color};
+  font-weight: 600;
 
   @media (min-width: 900px) {
     opacity: 1;
@@ -129,6 +133,8 @@ export const LinkBox = styled.li`
 export const Link = styled.a`
   display: flex;
   align-items: center;
+  opacity: ${({ open }) => (open ? "1" : "0")};
+  transition-delay: 1.2s;
   gap: 0.8rem;
   cursor: pointer;
 
@@ -138,11 +144,12 @@ export const Link = styled.a`
   }
 `;
 export const LinkNumber = styled.span`
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.navLinks.numbers};
 `;
 export const ResumeBtn = styled.button`
   opacity: ${({ open }) => (open ? "1" : "0")};
-  transition: all 0.2s;
+  transition-duration: 0.5s;
 
   @media (min-width: 900px) {
     opacity: 1;

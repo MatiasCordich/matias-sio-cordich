@@ -14,6 +14,15 @@ export const Navbar = ({ handleClick }) => {
     damping: 30
   };
 
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 24 }
+    },
+    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+  };
+
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(0)
 
@@ -58,10 +67,7 @@ export const Navbar = ({ handleClick }) => {
 
       <NavbarLinks open={open}>
         <SContent
-          as={motion.div}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .5, delay: 1.4 }}
+          open={open}
         >
           <BsFillSunFill />
           <SwitchBox onClick={handleClick} >
@@ -71,10 +77,6 @@ export const Navbar = ({ handleClick }) => {
         </SContent>
         <LinkBox
           open={open}
-          as={motion.li}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .5, delay: 1.5 }}
         >
           <Link
             activeClass='active'
@@ -89,11 +91,7 @@ export const Navbar = ({ handleClick }) => {
           </Link>
         </LinkBox>
         <LinkBox
-          open={open}
-          as={motion.li}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .5, delay: 1.6 }}>
+          open={open}>
           <Link
             activeClass='active'
             to='page2'
@@ -110,10 +108,6 @@ export const Navbar = ({ handleClick }) => {
         </LinkBox>
         <LinkBox
           open={open}
-          as={motion.li}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .5, delay: 1.7 }}
         >
           <Link
             activeClass='active'
@@ -131,10 +125,7 @@ export const Navbar = ({ handleClick }) => {
         </LinkBox>
         <LinkBox
           open={open}
-          as={motion.li}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .6, delay: 1.8 }}
+          
         >
           <Link
             activeClass='active'
@@ -153,10 +144,6 @@ export const Navbar = ({ handleClick }) => {
 
         <ResumeBtn
           open={open}
-          as={motion.button}
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: .5, delay: 1.9 }}
         >
           Resume
         </ResumeBtn>
