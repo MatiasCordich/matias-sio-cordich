@@ -73,7 +73,7 @@ export const Navbar = ({ handleClick }) => {
               duration={2000}
               style={{ cursor: 'pointer' }}
               offset={-1000}
-             >
+            >
               Home
             </Link>
           </LinkBox>
@@ -87,7 +87,7 @@ export const Navbar = ({ handleClick }) => {
               duration={2000}
               style={{ cursor: 'pointer' }}
               offset={-150}
-             
+
             >
               <LinkNumber>01.</LinkNumber>
               Sobre mi
@@ -104,7 +104,7 @@ export const Navbar = ({ handleClick }) => {
               duration={2000}
               style={{ cursor: 'pointer' }}
               offset={-150}
-           
+
             >
               <LinkNumber>02.</LinkNumber>
               Portfolio
@@ -121,7 +121,7 @@ export const Navbar = ({ handleClick }) => {
               duration={2000}
               style={{ cursor: 'pointer' }}
               offset={-150}
-           
+
             >
               <LinkNumber>03.</LinkNumber>
               Contacto
@@ -135,11 +135,7 @@ export const Navbar = ({ handleClick }) => {
         </NavbarLinks>
       </NavContainer>
 
-      <MobileNavBox/>
-
-      {open && (
-        <MobileNavLinks />
-      )}
+      <MobileNavBox />
 
     </>
 

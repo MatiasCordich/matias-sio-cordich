@@ -32,13 +32,18 @@ export const MenuBtn = styled.button`
   }
 `;
 
-export const LinksMobile = styled.ul`
+export const MobileLinksMenu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
   position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rebeccapurple;
+  backdrop-filter: blur(5rem);
 
   @media (min-width: 900px) {
       display: none;
