@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavbarLinks } from "../Navbar/navbarElements";
+import { LogoContainer } from "../Navbar/navbarElements";
 
 export const MobileNavMenu = styled.nav`
   width: 100%;
@@ -46,24 +46,21 @@ export const MobileLinksMenu = styled.ul`
   }
 `;
 
-export const LinksMobileContainer= styled.div`
+export const LinksMobileContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4rem;
   height: 100%;
-`
+`;
 
 export const LinkBoxMobile = styled.li`
   overflow: hidden;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.navLinks.color};
-`
-
-export const LinkNumberMobile = styled.p`
-`
+`;
 
 export const ResumeBtnMobile = styled.button`
   overflow: hidden;
-`
+`;

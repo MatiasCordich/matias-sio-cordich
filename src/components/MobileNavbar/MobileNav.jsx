@@ -12,7 +12,6 @@ import {
   MobileNavMenu,
   MenuBtn,
   MobileLinksMenu,
-  LinkNumberMobile,
   LinksMobileContainer,
   ResumeBtnMobile,
 } from "./navbarMobileElements";
@@ -22,8 +21,6 @@ import { useState } from "react";
 import { LinkBoxMobile } from "./navbarMobileElements";
 import { containerVars, menuVars, mobileLinkVars, spring } from "./animations";
 
-const savedTheme = window.localStorage.getItem("theme");
-
 export const MobileNavBox = ({ handleClick }) => {
   const [open, setOpen] = useState(false);
 
@@ -31,9 +28,12 @@ export const MobileNavBox = ({ handleClick }) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
+  const savedTheme = window.localStorage.getItem("theme");
+
   return (
     <>
       <MobileNavMenu>
+        {/* LOGO CONTAINER */}
         <LogoContainer>
           {savedTheme === "default" ? (
             <Logo src={logoL} alt="portfolio-matias-logo" />
@@ -41,11 +41,13 @@ export const MobileNavBox = ({ handleClick }) => {
             <Logo src={logo} alt="portfolio-matias-logo" />
           )}
         </LogoContainer>
+
+        {/* MENU BTN HAMBURGER */}
         <MenuBtn onClick={toggleMenu}>
           <HiOutlineMenuAlt3 />
         </MenuBtn>
-        {/* SWITCH THEME BUTTON */}
       </MobileNavMenu>
+
       <AnimatePresence>
         {open && (
           <MobileLinksMenu
@@ -62,15 +64,16 @@ export const MobileNavBox = ({ handleClick }) => {
               animate="open"
               exit="initial"
             >
-              <SContent 
-                as={motion.div} 
-                variants={mobileLinkVars}>
+              {/* SWITCH THEME BUTTON */}
+              <SContent as={motion.div} variants={mobileLinkVars}>
                 <BsFillSunFill />
                 <SwitchBox onClick={handleClick}>
                   <Switch as={motion.div} layout transition={spring} />
                 </SwitchBox>
                 <BsFillMoonFill />
               </SContent>
+
+              {/* LINK - HOME */}
               <LinkBoxMobile as={motion.li} variants={mobileLinkVars}>
                 <Link
                   onClick={toggleMenu}
@@ -85,6 +88,8 @@ export const MobileNavBox = ({ handleClick }) => {
                   Inicio
                 </Link>
               </LinkBoxMobile>
+
+              {/* LINK - ABOUT */}
               <LinkBoxMobile as={motion.li} variants={mobileLinkVars}>
                 <Link
                   onClick={toggleMenu}
@@ -99,6 +104,8 @@ export const MobileNavBox = ({ handleClick }) => {
                   Sobre Mi
                 </Link>
               </LinkBoxMobile>
+
+              {/* LINK - PROJECTS */}
               <LinkBoxMobile as={motion.li} variants={mobileLinkVars}>
                 <Link
                   onClick={toggleMenu}
@@ -113,6 +120,8 @@ export const MobileNavBox = ({ handleClick }) => {
                   Projectos
                 </Link>
               </LinkBoxMobile>
+
+              {/* LINK - CONTACTC */}
               <LinkBoxMobile as={motion.li} variants={mobileLinkVars}>
                 <Link
                   onClick={toggleMenu}
@@ -127,6 +136,8 @@ export const MobileNavBox = ({ handleClick }) => {
                   Contacto
                 </Link>
               </LinkBoxMobile>
+
+              {/* LINK - RESUME */}
               <ResumeBtnMobile as={motion.button} variants={mobileLinkVars}>
                 Resume
               </ResumeBtnMobile>

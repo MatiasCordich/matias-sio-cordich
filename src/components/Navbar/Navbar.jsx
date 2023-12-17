@@ -43,7 +43,8 @@ export const Navbar = ({ handleClick }) => {
   return (
     <>
       <NavContainer scroll={scroll}>
-        {/* LOGO */}
+
+        {/* LOGO CONTAINER */}
         <LogoContainer
           as={motion.div}
           initial={{ opacity: 0 }}
@@ -59,6 +60,7 @@ export const Navbar = ({ handleClick }) => {
 
         {/* NAVBAR LINKS */}
         <NavbarLinks>
+
           {/* SWITCH THEME BUTTON */}
           <SContent>
             <BsFillSunFill />
@@ -82,6 +84,7 @@ export const Navbar = ({ handleClick }) => {
               Home
             </Link>
           </LinkBox>
+          
           {/* LINK - ABOUT */}
           <LinkBox>
             <Link

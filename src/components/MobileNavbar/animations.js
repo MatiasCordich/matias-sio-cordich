@@ -17,7 +17,7 @@ export const menuVars = {
   exit: {
     height: 0,
     transition: {
-      delay: 0.5,
+      delay: 1,
       duration: 0.6,
     },
   },

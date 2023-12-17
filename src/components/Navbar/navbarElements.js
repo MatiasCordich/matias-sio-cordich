@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const NavContainer = styled.nav`
   display: none;
   @media (min-width: 900px) {
-    display: block;
     position: fixed;
     top: 0;
     max-width: 220rem;
@@ -27,6 +26,8 @@ export const NavContainer = styled.nav`
 
 export const LogoContainer = styled.div`
   display: flex;
+  position: absolute;
+  z-index: 9999;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
