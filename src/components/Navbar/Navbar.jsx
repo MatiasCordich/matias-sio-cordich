@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { MobileNavBox} from "../MobileNavbar/MobileNav.jsx";
+import { useThemeMode } from "../../hooks/useThemeMode.js";
 
 const spring = {
   type: "spring",
@@ -38,7 +39,7 @@ export const Navbar = ({ handleClick }) => {
     };
   }, []);
 
-  const savedTheme = window.localStorage.getItem("theme");
+  let themeSaved = localStorage.getItem('theme')
 
   return (
     <>
@@ -51,10 +52,10 @@ export const Navbar = ({ handleClick }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          {savedTheme === "default" ? (
-            <Logo src={logoL} alt="portfolio-matias-logo" />
-          ) : (
+          {themeSaved != "default" ? (
             <Logo src={logo} alt="portfolio-matias-logo" />
+          ) : (
+            <Logo src={logoL} alt="portfolio-matias-logo" />
           )}
         </LogoContainer>
 
