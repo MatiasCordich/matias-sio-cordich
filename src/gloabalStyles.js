@@ -62,6 +62,10 @@ a {
   text-decoration: none;
 }
 
+img{
+  max-width: 100%;
+}
+
 button{
   background-color: ${({ theme }) => theme.colors.buttonResume.background};
   border: ${({ theme }) => theme.colors.buttonResume.border};

@@ -30,9 +30,9 @@ export const ImageBox = styled.div`
 export const ImageProject = styled.img`
   max-width: 70rem;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 40rem;
   border-radius: 0.6rem;
+  object-fit: cover;
 `;
 export const DescriptionLeft = styled.div`
   width: 100%;
@@ -82,13 +82,19 @@ export const ProjectStack = styled.ul`
 `;
 export const ItemStack = styled.li`
   color: ${({ theme }) => theme.colors.titles.h1};
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.5rem;
 `;
 export const ProjectLinks = styled.ul`
   display: flex;
   gap: 1rem;
 `;
-export const Links = styled.a`
+export const LinkProject = styled.a`
   font-size: 2.2rem;
-  color: var(--text-Light);
+  color: ${({ theme }) => theme.colors.socialLink.color};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.socialLink.hoverColor};
+    transition: all 0.8s;
+  }
 `;
