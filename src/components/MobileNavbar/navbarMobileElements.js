@@ -33,20 +33,37 @@ export const MenuBtn = styled.button`
 `;
 
 export const MobileLinksMenu = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
   position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   backdrop-filter: blur(5rem);
 
   @media (min-width: 900px) {
-      display: none;
+    display: none;
   }
+`;
+
+export const LinksMobileContainer= styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 100%;
 `
 
+export const LinkBoxMobile = styled.li`
+  overflow: hidden;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.navLinks.color};
+`
+
+export const LinkNumberMobile = styled.p`
+`
+
+export const ResumeBtnMobile = styled.button`
+  overflow: hidden;
+`

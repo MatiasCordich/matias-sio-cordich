@@ -81,7 +81,7 @@ export const ProjectStack = styled.ul`
   flex-wrap: wrap;
 `;
 export const ItemStack = styled.li`
-  color: ${({ theme }) => theme.colors.titles.h3};
+  color: ${({ theme }) => theme.colors.titles.h1};
   font-weight: 500;
 `;
 export const ProjectLinks = styled.ul`

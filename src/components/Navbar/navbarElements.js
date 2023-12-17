@@ -40,7 +40,10 @@ export const LogoContainer = styled.div`
 `;
 
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  position: absolute;
+  z-index: 999;
+`;
 
 export const SContent = styled.div`
   display: flex;

@@ -21,7 +21,7 @@ export const ContactTitle = styled.h2`
   text-align: center;
 `;
 export const ContactText = styled.p`
-  color: var(--letters-D);
+  color: ${({ theme }) => theme.colors.text};
   max-width: 70rem;
   font-weight: 500;
   width: 95%;

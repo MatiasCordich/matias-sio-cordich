@@ -19,8 +19,9 @@ export const GlobalStyle = createGlobalStyle`
   /* LIGHT MODE */
   --background-L: #F5F7F8;
   --span-L: #59CE8F;
-  --text-Light-l: #213547;
-  --text-Dark-l: #3c3c3cb3;
+  --text-L: #213547;
+  --titles-L: #213547;
+  --letters-L: #FFFFFF;
 
   /* Max-widths */
   --contaier: 200rem;
@@ -67,7 +68,6 @@ button{
   padding: 1.5rem 2rem;
   color: ${({ theme }) => theme.colors.buttonResume.color};
   font-size: 1.6rem;
-  cursor: pointer;
   padding: 1.5rem 2rem;
   border-radius: 0.6rem;
   font-family: var(--title-Font);

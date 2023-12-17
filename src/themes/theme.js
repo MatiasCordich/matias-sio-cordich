@@ -5,54 +5,54 @@ export const themes = {
         background: "var(--background-L)",
       },
       titles: {
-        h3: "var(--text-Light-l)",
-        h1: "var(--text-Green-l)",
-        span: "var(--text-Green-l)",
+        h3: "var(--span-L)",
+        h1: "var(--titles-L)",
+        span: "var(--span-L)",
       },
-      text: "var(--text-Dark-l)",
+      text: "var(--text-L)",
       buttonResume: {
-        background: "var(--text-Green-l)",
-        border: "1px solid var(--text-Green-l)",
-        color: "var(--body-Color-l)",
+        background: "var(--span-L)",
+        border: "1px solid var(--span-L)",
+        color: "var(--letters-L)",
         hover: "none",
         transition: "none"
       },
       proyectBtn: {
-        background: "var(--text-Green-l)",
-        border: "1px solid var(--text-Green-l)",
-        color: "var(--body-Color-l)"
+        background: "var(--span-L)",
+        border: "1px solid var(--span-L)",
+        color: "var(--letters-L)",
       },
       navLinks: {
-        color: "var(--text-Light-l)",
-        numbers: "var(--text-Green-l)"
+        color: "var(--text-L)",
+        numbers: "var(--span-L)"
       },
       buttonMode:{
-        icon: "var(--text-Light-l)",
-        button: "var(--text-Green-l)"
+        icon: "var(--text-L)",
+        button: "var(--span-L)"
       },
       buttonNav: {
-        background: "var(--text-Green-l)"
+        background: "var(--span-L)"
       },
       navbarLinks:{
         background: "rgba(265, 265, 265, 0.1)"
       },
       socialLink:{
-        color: "var(--text-Light-l)",
-        hoverColor: "var(--text-Green-l)"
+        color: "var(--text-L)",
+        hoverColor: "var(--span-L)"
       },
       emailLink: {
-        color: "var(--text-Light-l)",
-        hoverColor: "var(--text-Green-l)"
+        color: "var(--text-L)",
+        hoverColor: "var(--span-L)"
       },
       titleSection: {
-        span: "var(--text-Green-l)",
-        text: "var(--text-Light-l)"
+        span: "var(--span-L)",
+        text: "var(--text-L)"
       },
       checkIcon: {
-        color: "var(--text-Green-l)"
+        color: "var(--span-L)"
       },
       image: {
-        background: "var(--text-Green-l)"
+        background: "var(--span-L)"
       },
       flexDirection: "flex-start",
     },
@@ -89,7 +89,7 @@ export const themes = {
         button: "var(--letters-D)"
       },
       buttonNav: {
-        background: "#060f1c"
+        background: "var(--span-D)"
       },
       navbarLinks:{
         background: "rgba(10, 25, 47, 0.65)"

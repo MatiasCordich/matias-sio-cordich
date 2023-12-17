@@ -28,7 +28,7 @@ export const TextBox = styled.li``;
 export const Text = styled.p`
   line-height: 4rem;
   color: ${({ theme }) => theme.colors.text};
-  font-weight: 300;
+  font-weight: 400;
 `;
 export const SpanText = styled.span`
   color: ${({ theme }) => theme.colors.checkIcon.color};
@@ -45,7 +45,7 @@ export const TechStack = styled.ul`
     row-gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     color: ${({ theme }) => theme.colors.text};
-    font-weight: 200;
+    font-weight: 500;
 
     @media (min-width: 900px) {
         grid-template-columns: repeat(3, 1fr);

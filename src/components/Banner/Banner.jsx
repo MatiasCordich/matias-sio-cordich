@@ -34,7 +34,7 @@ const Banner = () => {
                 transition={{ duration: .5, delay: 2.5 }}>
 
                 Matias Sio Cordich.{" "} <BannerSpan>
-                    Desarollador Font-End.
+                    Desarrollador Font-End.
                 </BannerSpan>
             </BannerTitle>
             <BannerText
@@ -43,7 +43,7 @@ const Banner = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: .5, delay: 2.7 }}
             >
-                Soy desarollador web especializado en el stack MERN.
+                Soy desarrollador web especializado en el stack MERN.
                 Actualmente me especializo en el área del Front-End, diseñando y desarollando interfaces modernas y adaptables.
                 Mi objetivo es conseguir mi primer empleo IT con el fin de poder aplicar todos mis conocimientos aprendidos.
             </BannerText>

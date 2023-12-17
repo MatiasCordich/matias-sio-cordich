@@ -1,41 +1,48 @@
-import { LinkBox, LinkNumber, Logo, LogoContainer, NavContainer, NavbarLinks, ResumeBtn, SContent, Switch, SwitchBox } from "./navbarElements"
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
-import { Link } from "react-scroll"
-import { logo, logoL } from '../../assets/index.js'
-import { motion } from 'framer-motion'
-import { useEffect, useState } from "react"
+import {
+  LinkBox,
+  LinkNumber,
+  Logo,
+  LogoContainer,
+  NavContainer,
+  NavbarLinks,
+  ResumeBtn,
+  SContent,
+  Switch,
+  SwitchBox,
+} from "./navbarElements";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import { Link } from "react-scroll";
+import { logo, logoL } from "../../assets/index.js";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-import { MobileNavBox, MobileNavLinks } from "../MobileNavbar/MobileNav.jsx";
-
+import { MobileNavBox} from "../MobileNavbar/MobileNav.jsx";
 
 const spring = {
   type: "spring",
   stiffness: 700,
-  damping: 30
+  damping: 30,
 };
 
 export const Navbar = ({ handleClick }) => {
-
-  const [open, setOpen] = useState(false);
-  const [scroll, setScroll] = useState(0)
+  const [scroll, setScroll] = useState(0);
 
   const handleScroll = () => {
-    setScroll(window.scrollY)
-  }
+    setScroll(window.scrollY);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [])
+  }, []);
 
-  const savedTheme = window.localStorage.getItem('theme')
+  const savedTheme = window.localStorage.getItem("theme");
 
   return (
     <>
       <NavContainer scroll={scroll}>
-
         {/* LOGO */}
         <LogoContainer
           as={motion.div}
@@ -43,21 +50,19 @@ export const Navbar = ({ handleClick }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          {
-            savedTheme === "default"
-              ? <Logo src={logoL} alt="portfolio-matias-logo" />
-              : <Logo src={logo} alt="portfolio-matias-logo" />
-          }
+          {savedTheme === "default" ? (
+            <Logo src={logoL} alt="portfolio-matias-logo" />
+          ) : (
+            <Logo src={logo} alt="portfolio-matias-logo" />
+          )}
         </LogoContainer>
 
-
         {/* NAVBAR LINKS */}
-        <NavbarLinks >
-
+        <NavbarLinks>
           {/* SWITCH THEME BUTTON */}
           <SContent>
             <BsFillSunFill />
-            <SwitchBox onClick={handleClick} >
+            <SwitchBox onClick={handleClick}>
               <Switch as={motion.div} layout transition={spring} />
             </SwitchBox>
             <BsFillMoonFill />
@@ -66,12 +71,12 @@ export const Navbar = ({ handleClick }) => {
           {/* LINK - HOME */}
           <LinkBox>
             <Link
-              activeClass='active'
-              to='page1'
+              activeClass="active"
+              to="page1"
               spy={true}
               smooth={true}
               duration={2000}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               offset={-1000}
             >
               Home
@@ -80,14 +85,13 @@ export const Navbar = ({ handleClick }) => {
           {/* LINK - ABOUT */}
           <LinkBox>
             <Link
-              activeClass='active'
-              to='page2'
+              activeClass="active"
+              to="page2"
               spy={true}
               smooth={true}
               duration={2000}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               offset={-150}
-
             >
               <LinkNumber>01.</LinkNumber>
               Sobre mi
@@ -97,14 +101,13 @@ export const Navbar = ({ handleClick }) => {
           {/* LINK - PROJECT */}
           <LinkBox>
             <Link
-              activeClass='active'
-              to='page3'
+              activeClass="active"
+              to="page3"
               spy={true}
               smooth={true}
               duration={2000}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               offset={-150}
-
             >
               <LinkNumber>02.</LinkNumber>
               Portfolio
@@ -114,14 +117,13 @@ export const Navbar = ({ handleClick }) => {
           {/* LINK - CONTACT */}
           <LinkBox>
             <Link
-              activeClass='active'
-              to='page4'
+              activeClass="active"
+              to="page4"
               spy={true}
               smooth={true}
               duration={2000}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               offset={-150}
-
             >
               <LinkNumber>03.</LinkNumber>
               Contacto
@@ -129,15 +131,12 @@ export const Navbar = ({ handleClick }) => {
           </LinkBox>
 
           {/* BUTTON RESUME */}
-          <ResumeBtn>
-            Resume
-          </ResumeBtn>
+          <ResumeBtn>Resume</ResumeBtn>
         </NavbarLinks>
       </NavContainer>
 
-      <MobileNavBox />
-
+      {/* NAVBAR MOBILE */}
+      <MobileNavBox handleClick={handleClick} />
     </>
-
-  )
-}
+  );
+};

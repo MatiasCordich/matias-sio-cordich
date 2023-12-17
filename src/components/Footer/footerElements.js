@@ -6,7 +6,7 @@ export const FooterBox = styled.footer`
     align-items: center;
     width: 100%;
     height: 30rem;
-    color: var(--span-D);
+    color: ${({ theme }) => theme.colors.titles.h1};
 `
 
 export const Year = styled.p``
