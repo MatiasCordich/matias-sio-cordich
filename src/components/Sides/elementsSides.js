@@ -94,5 +94,5 @@ export const TextLink = styled.p`
 export const AsideLine = styled.div`
   width: 0.2rem;
   height: 20rem;
-  background-color: var(--text-Dark);
+  background-color: var(--span-D);
 `;

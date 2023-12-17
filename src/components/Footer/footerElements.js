@@ -6,6 +6,7 @@ export const FooterBox = styled.footer`
     align-items: center;
     width: 100%;
     height: 30rem;
+    color: var(--span-D);
 `
 
 export const Year = styled.p``

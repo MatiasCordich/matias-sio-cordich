@@ -67,8 +67,9 @@ export const ProjectTitle = styled.h3`
   color: ${({ theme }) => theme.colors.titles.h1};
 `;
 export const ProjectText = styled.p`
-  background-color: #112240;
+  background-color: ${({ theme }) => theme.colors.titles.span};
   font-size: 1.5rem;
+  color: ${({ theme }) => theme.colors.text};
   padding: 2rem;
   line-height: 3rem;
   border-radius: 0.6rem;
@@ -80,7 +81,7 @@ export const ProjectStack = styled.ul`
   flex-wrap: wrap;
 `;
 export const ItemStack = styled.li`
-  color: var(--text-Dark);
+  color: ${({ theme }) => theme.colors.titles.h3};
   font-weight: 500;
 `;
 export const ProjectLinks = styled.ul`

@@ -2,7 +2,7 @@ export const themes = {
   default: {
     colors: {
       body: {
-        background: "var(--body-Color-l)",
+        background: "var(--background-L)",
       },
       titles: {
         h3: "var(--text-Light-l)",
@@ -60,33 +60,33 @@ export const themes = {
   dark: {
     colors: {
       body: {
-        background: "var(--body-Color)",
+        background: "var(--background-D)",
       },
       titles: {
-        h3: "var(--text-Green)",
-        h1: "var(--text-Light)",
-        span: "var(--text-Dark)",
+        h3: "var(--span-D)",
+        h1: "var(--text-D)",
+        span: "var(--titles-D)",
       },
-      text: "var(--text-Dark)",
+      text: "var(--letters-D)",
       buttonResume: {
         background: "transparent",
-        border: "1px solid var(--text-Green)",
-        color: "var(--text-Green)",
+        border: "1px solid var(--text-D)",
+        color: "var(--text-D)",
         hover: "#64ffdb4f",
         transition: "all 0.8s"
       },
       proyectBtn: {
         background: "transparent",
-        border: "1px solid var(--text-Green)",
-        color: "var(--text-Green)"
+        border: "1px solid var(--text-D)",
+        color: "var(--text-D)"
       },
       navLinks: {
-        color: "var(--text-Light)",
-        numbers: "var(--text-Green)"
+        color: "var(--text-D)",
+        numbers: "var(--span-D)"
       },
       buttonMode:{
-        icon: "var(--text-Light)",
-        button: "var(--text-Light)"
+        icon: "var(--span-D)",
+        button: "var(--letters-D)"
       },
       buttonNav: {
         background: "#060f1c"
@@ -95,21 +95,22 @@ export const themes = {
         background: "rgba(10, 25, 47, 0.65)"
       },
       socialLink:{
-        color: "var(--text-Light)",
-        hoverColor: "var(--text-Green)"
+        color: "var(--span-D)",
+        hoverColor: "var(--letters-D)"
       },
       emailLink: {
-        color: "var(--text-Light)",
-        hoverColor: "var(--text-Green)"
+        color: "var(--span-D)",
+        hoverColor: "var(--letters-D)"
       },
       titleSection: {
-        span: "var(--text-Green)",
+        span: "var(--span-D)",
+        text: "var(--text-D)",
       },
       checkIcon: {
-        color: "var(--text-Green)"
+        color: "var(--span-D)"
       },
       image: {
-        background: "var(--body-Color-l)"
+        background: "var(--span-D)"
       },
       flexDirection: "flex-end",
     },

@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 :root {
+
   /* Fonts */
   --title-Font: "Inter", sans-serif;
   --body-Font: "Montserrat", sans-serif;
@@ -9,14 +10,15 @@ export const GlobalStyle = createGlobalStyle`
   /* Colors */
 
   /* DARK MODE */
-  --body-Color: #0a192f;
-  --text-Green: #64ffda;
-  --text-Light: #ccd6f6;
-  --text-Dark: #8892b0;
+  --background-D: #040D12;
+  --span-D: #93B1A6;
+  --text-D: #C7F0E1;
+  --titles-D: #255c5c;
+  --letters-D: #FAFAFA;
 
   /* LIGHT MODE */
-  --body-Color-l: #F5F7F8;
-  --text-Green-l: #59CE8F;
+  --background-L: #F5F7F8;
+  --span-L: #59CE8F;
   --text-Light-l: #213547;
   --text-Dark-l: #3c3c3cb3;
 
