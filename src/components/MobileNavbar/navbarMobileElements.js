@@ -39,7 +39,7 @@ export const MobileLinksMenu = styled.ul`
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5rem);
+  background-color: ${({ theme }) => theme.colors.body.background};
 
   @media (min-width: 900px) {
     display: none;
