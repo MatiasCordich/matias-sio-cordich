@@ -12,7 +12,7 @@ export const projectDescription = [
     {
         miniTitle: "Proyecto personal",
         title: "Eco Woods Landing Page",
-        descrption: "Landing Page informatica de una marca ficticia de muebles ecológicos",
+        descrption: "Landing Page informativa de una marca ficticia de muebles ecológicos",
         techstack: ["Vite","HTML","CSS"],
         links:{
             github:'https://github.com/MatiasCordich/eco-woods-landing-page',
