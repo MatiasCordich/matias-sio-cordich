@@ -23,7 +23,6 @@ export const NavContainer = styled.nav`
   }
 `;
 
-
 export const LogoContainer = styled.div`
   display: flex;
   position: absolute;
@@ -39,7 +38,6 @@ export const LogoContainer = styled.div`
     width: 10%;
   }
 `;
-
 
 export const Logo = styled.img`
   position: absolute;
@@ -116,11 +114,22 @@ export const LinkNumber = styled.span`
   font-weight: 600;
   color: ${({ theme }) => theme.colors.navLinks.numbers};
 `;
-export const ResumeBtn = styled.button`
+export const ResumeBtn = styled.a`
+  background-color: ${({ theme }) => theme.colors.buttonResume.background};
+  border: ${({ theme }) => theme.colors.buttonResume.border};
+  padding: 1.5rem 2rem;
+  color: ${({ theme }) => theme.colors.buttonResume.color};
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.6rem;
+  font-family: var(--title-Font);
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.buttonResume.hover};
+    transition: ${({ theme }) => theme.colors.buttonResume.transition};
+  }
   @media (min-width: 900px) {
     opacity: 1;
   }
 `;
-
-
-

@@ -15,9 +15,9 @@ import { Link } from "react-scroll";
 import { logo, logoL } from "../../assets/index.js";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import { MobileNavBox} from "../MobileNavbar/MobileNav.jsx";
-import { useThemeMode } from "../../hooks/useThemeMode.js";
+import CV from '../../files/CV.pdf'
+
 
 const spring = {
   type: "spring",
@@ -135,7 +135,7 @@ export const Navbar = ({ handleClick }) => {
           </LinkBox>
 
           {/* BUTTON RESUME */}
-          <ResumeBtn>Resume</ResumeBtn>
+          <ResumeBtn target="_blank" href={CV}>Resume</ResumeBtn>
         </NavbarLinks>
       </NavContainer>
 
