@@ -1,6 +1,7 @@
 import {
   Logo,
   LogoContainer,
+  ResumeBtn,
   SContent,
   Switch,
   SwitchBox,
@@ -12,14 +13,14 @@ import {
   MobileNavMenu,
   MenuBtn,
   MobileLinksMenu,
-  LinksMobileContainer,
-  ResumeBtnMobile,
+  LinksMobileContainer
 } from "./navbarMobileElements";
 import { logo, logoL } from "../../assets";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
 import { LinkBoxMobile } from "./navbarMobileElements";
 import { containerVars, menuVars, mobileLinkVars, spring } from "./animations";
+import CV from '../../files/CV.pdf'
 
 export const MobileNavBox = ({ handleClick }) => {
   const [open, setOpen] = useState(false);
@@ -138,9 +139,9 @@ export const MobileNavBox = ({ handleClick }) => {
               </LinkBoxMobile>
 
               {/* LINK - RESUME */}
-              <ResumeBtnMobile as={motion.button} variants={mobileLinkVars}>
+              <ResumeBtn target="_blank" href={CV} as={motion.a} variants={mobileLinkVars}>
                 Resume
-              </ResumeBtnMobile>
+              </ResumeBtn>
             </LinksMobileContainer>
           </MobileLinksMenu>
         )}

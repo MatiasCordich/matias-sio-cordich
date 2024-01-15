@@ -61,6 +61,3 @@ export const LinkBoxMobile = styled.li`
   color: ${({ theme }) => theme.colors.navLinks.color};
 `;
 
-export const ResumeBtnMobile = styled.button`
-  overflow: hidden;
-`;
